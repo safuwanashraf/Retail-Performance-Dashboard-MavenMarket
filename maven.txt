@@ -1,0 +1,20 @@
+Transformations done
+
+changed date format in customer table and returns table
+mm-dd-yyyy to dd-mm-yyyy
+using this code in custome column:
+let
+    DateParts = Text.Split([YourColumn], "/"),  // Split by delimiter "/"
+    MonthPart = DateParts{0},
+    DayPart = DateParts{1},
+    YearPart = DateParts{2}
+in
+    DayPart & "-" & MonthPart & "-" & YearPart
+
+
+ALternate method to change date type:
+go to transform, click on data type, using locale and select the one in mm-dd-yyyy format
+
+
+Added a new column week status in calendar
+
